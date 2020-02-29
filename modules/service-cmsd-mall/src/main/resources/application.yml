@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: druid, mybatisplus,consul
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+
+
+server:
+  servlet:
+    context-path : /csmd
+  port: 8087
+
+
+logging:
+  file: csmd-mall-druid.log
+  level:
+    root: INFO
+    com.lxjy.mall.mapper: debug #这样配制可以输出sql
+
+
+

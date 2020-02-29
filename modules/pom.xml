@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lxjy</artifactId>
+        <groupId>com.lxjy</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>modules</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>业务服务</description>
+    <modules>
+        <module>user-service</module>
+        <module>user-consumers</module>
+        <module>service-redis</module>
+        <module>service-cmsd-mall</module>
+    </modules>
+
+    <properties>
+        <revision>1.0.0</revision>
+        <mybatis.plus.version>3.3.1</mybatis.plus.version>
+        <mybatis.plus.generator.version>3.3.1</mybatis.plus.generator.version>
+        <alibaba.druid.verson>1.1.21</alibaba.druid.verson>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${alibaba.druid.verson}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis.plus.generator.version}</version>
+            </dependency>
+
+
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+
+
+</project>
